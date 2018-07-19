@@ -1,0 +1,275 @@
+* {
+  padding: 0;
+  margin: 0; }
+
+body {
+  font-size: 16px; }
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0; }
+
+.head {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 10%;
+  background-color: #E75555;
+  color: #fff; }
+  .head .title {
+    margin: auto 5%; }
+
+.wrap {
+  background-color: black;
+  height: 550px;
+  width: 285px;
+  padding: 1.5% .5%;
+  -webkit-border-radius: 30px;
+          border-radius: 30px;
+  position: relative;
+  font-family: "OpenSansRegular"; }
+  .wrap .dynamic {
+    background-color: #292929;
+    height: .9%;
+    width: 14%;
+    -webkit-border-radius: 13%;
+            border-radius: 13%;
+    margin: 0 auto; }
+  .wrap .screen {
+    margin: 6% auto 3%;
+    height: 88%;
+    background: -webkit-gradient(linear, left bottom, left top, from(#6A278D), to(#24448D));
+    background: -webkit-linear-gradient(bottom, #6A278D, #24448D);
+    background: -o-linear-gradient(bottom, #6A278D, #24448D);
+    background: linear-gradient(to top, #6A278D, #24448D);
+    color: #fff; }
+    .wrap .screen .home {
+      height: 95%; }
+    .wrap .screen .top-bar {
+      position: relative;
+      height: 5%;
+      padding: 1% 2%;
+      background-color: rgba(0, 0, 0, 0.8);
+      color: #fff;
+      font-size: .8em; }
+      .wrap .screen .top-bar .time {
+        position: absolute;
+        left: 44%; }
+      .wrap .screen .top-bar .right {
+        float: right;
+        font-size: .85em; }
+        .wrap .screen .top-bar .right i {
+          padding: 4% 0; }
+    .wrap .screen .todo-list {
+      width: 100%;
+      height: 60%; }
+      .wrap .screen .todo-list .head {
+        height: 16%;
+        -webkit-box-pack: justify;
+        -webkit-justify-content: space-between;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+        background-color: #2384D1; }
+      .wrap .screen .todo-list .list {
+        width: 100%;
+        max-height: 84%;
+        background-color: rgba(255, 255, 255, 0.85);
+        color: #474747;
+        overflow-y: scroll;
+        font-family: "Exo2Regular"; }
+        .wrap .screen .todo-list .list li {
+          list-style-type: none;
+          padding: 7% 5%;
+          border-bottom: 1px solid #D4D4D4; }
+          .wrap .screen .todo-list .list li .text {
+            width: 90%;
+            float: left;
+            padding-right: 5%; }
+          .wrap .screen .todo-list .list li .state {
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            margin: auto;
+            width: 10%;
+            float: right; }
+            .wrap .screen .todo-list .list li .state .ok {
+              font-size: 1.2em;
+              color: #00D023; }
+            .wrap .screen .todo-list .list li .state .circle {
+              width: 1em;
+              height: 1em;
+              border: 2px solid #909090;
+              -webkit-border-radius: 50%;
+                      border-radius: 50%; }
+  .wrap .apps {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: space-around;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
+    width: 100%;
+    height: 40%;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    .wrap .apps .item {
+      -webkit-flex-basis: 25%;
+          -ms-flex-preferred-size: 25%;
+              flex-basis: 25%;
+      height: 40%;
+      cursor: pointer; }
+      .wrap .apps .item .icon {
+        width: 100%;
+        height: 100%;
+        background: transparent;
+        -webkit-background-size: 100% 100%;
+                background-size: 100%;
+        background-repeat: no-repeat; }
+      .wrap .apps .item .title {
+        font-size: .95em;
+        text-align: center;
+        font-family: "OpenSansLight"; }
+      .wrap .apps .item .icon.map {
+        background-image: url(../img/map-released.png); }
+        .wrap .apps .item .icon.map:active {
+          background-image: url(../img/map-pressed.png); }
+      .wrap .apps .item .icon.mail {
+        background-image: url(../img/post-released.png); }
+        .wrap .apps .item .icon.mail:active {
+          background-image: url(../img/post-pressed.png); }
+  .wrap .mail {
+    height: 95%;
+    background-color: #fff;
+    color: #3F3F3F; }
+    .wrap .mail .head {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      height: 10%;
+      background-color: #E75555;
+      color: #fff; }
+      .wrap .mail .head .title {
+        margin: auto 5%; }
+    .wrap .mail .messages {
+      height: 90%;
+      overflow-y: scroll; }
+    .wrap .mail .message {
+      position: relative;
+      list-style-type: none;
+      padding: 4%;
+      border-bottom: 1px solid #CBCBCB;
+      cursor: pointer;
+      -webkit-transition: .2s;
+      -o-transition: .2s;
+      transition: .2s;
+      color: #878787; }
+      .wrap .mail .message:hover {
+        background-color: #EAEAEA; }
+      .wrap .mail .message .sender {
+        padding-right: 20%;
+        font-size: .95em; }
+      .wrap .mail .message .theme,
+      .wrap .mail .message .text {
+        font: .95em "OpenSansRegular"; }
+      .wrap .mail .message .text {
+        font: .8em "RobotoLight"; }
+      .wrap .mail .message .date {
+        position: absolute;
+        top: 8%;
+        right: 3%;
+        font: .7em "Exo2Regular"; }
+      .wrap .mail .message .icon-user,
+      .wrap .mail .message .icon-letter {
+        color: #878787; }
+      .wrap .mail .message .icon-user {
+        font-size: .9em; }
+    .wrap .mail .message.unread {
+      background-color: #F8F8F8;
+      color: #000; }
+      .wrap .mail .message.unread .sender {
+        font-family: "OpenSansBold"; }
+      .wrap .mail .message.unread .theme {
+        font-family: "OpenSansBold"; }
+      .wrap .mail .message.unread .date {
+        font-family: "Exo2Bold";
+        color: #4773DB; }
+      .wrap .mail .message.unread .icon-user,
+      .wrap .mail .message.unread .icon-letter {
+        color: #000; }
+  .wrap .letter {
+    height: 95%;
+    background-color: #fff; }
+    .wrap .letter .head {
+      font-size: 1.3em; }
+      .wrap .letter .head i {
+        cursor: pointer; }
+    .wrap .letter .content {
+      padding-bottom: 10%;
+      height: 90%;
+      color: #000;
+      font-family: "RobotoLight";
+      overflow-y: scroll; }
+      .wrap .letter .content .theme {
+        font-family: "OpenSansSemiBold";
+        padding: 6% 7%;
+        border-bottom: 1px solid #DDDDDD; }
+      .wrap .letter .content .info {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        padding: 4% 7%; }
+        .wrap .letter .content .info .logo {
+          -webkit-flex-basis: 25%;
+              -ms-flex-preferred-size: 25%;
+                  flex-basis: 25%; }
+          .wrap .letter .content .info .logo img {
+            max-width: 100%; }
+        .wrap .letter .content .info .user-info {
+          -webkit-box-flex: 3;
+          -webkit-flex: 3 1 50%;
+              -ms-flex: 3 1 50%;
+                  flex: 3 1 50%;
+          padding-left: 10%; }
+          .wrap .letter .content .info .user-info .sender {
+            margin-top: 2%; }
+          .wrap .letter .content .info .user-info .recipient,
+          .wrap .letter .content .info .user-info .date {
+            color: #4F4F4F; }
+          .wrap .letter .content .info .user-info .recipient {
+            font-size: .85em; }
+          .wrap .letter .content .info .user-info .date {
+            font-size: .75em; }
+      .wrap .letter .content .text {
+        padding: 1% 7%;
+        font: .9em "RobotoLight";
+        text-align: justify;
+        color: #4C4C4C; }
+  .wrap .button {
+    position: relative;
+    height: 2.5em;
+    width: 2.5em;
+    margin: 0 auto;
+    -webkit-border-radius: 50%;
+            border-radius: 50%;
+    background-color: #252525;
+    cursor: pointer; }
+    .wrap .button .square {
+      position: absolute;
+      top: 30%;
+      left: 30%;
+      width: 40%;
+      height: 40%;
+      border: 1px solid #575757;
+      -webkit-border-radius: 15%;
+              border-radius: 15%; }

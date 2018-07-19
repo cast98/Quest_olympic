@@ -1,0 +1,60 @@
+#game-container-wrapper
+  text-align: center
+
+#game-container
+  position: relative
+  display: inline-block
+  overflow: hidden
+
+.blurred > canvas, .blurred > .fake-browser
+  filter: blur(4px)
+
+#dialog-container
+  font-family: "Pangolin"
+  height: 30%
+  position: absolute
+  bottom: 0
+  width: 100%
+  background-color: rgba(0, 0, 0, 0.7)
+  padding: 20px
+  text-align: left
+  color: white
+  white-space: pre-line
+
+
+  @media (max-width: 820px)
+    height: 40%
+
+  @media (min-width: 1100px)
+    font-size: 20px
+    height: 25%
+
+  @media (min-width: 1400px)
+    font-size: 24px
+
+  font-size: 16px
+  #message-source
+    font-weight: bold
+
+  #message-hint
+    text-align: right
+    color: #adb5bd
+
+.show-phone-button
+  z-index: 1
+  position: absolute
+  top: 12px
+  right: 10px
+  height: 72px
+  width: 73px
+  cursor: pointer
+  background-color: transparent
+  border: none
+  background-size: 100%
+  background-repeat: no-repeat
+  background-image: url(../../img/button-phone-released.png)
+  &:active
+    background-image: url(../../img/button-phone-pressed.png)
+  &:disabled
+    background-image: url(../../img/button-phone-disabled.png)
+
